@@ -4,20 +4,24 @@ class Client {
         this.phone = phone,
         this.email = email,
         this.bookings = []
+        this.newDate = Date()
     }
     
-    createBooking(barber) {
+    createBooking(barber,date) {
         this.bookings.push(barber)   
     }
     removeBooking(barber){
         this.bookings.pop(barber)
+    }
+    updateBooking(barber,newDate){
+        this.bookings.splice(bookings.length-1, 1 ,newDate)
     }
 }
 class Barber {
     constructor(name,address,date) {
         this.name =name,
         this.address = address,
-        this.date = date,
+        this.date = Date(),
         this.experts = ['haircut','manicure']
     }
 }
@@ -28,5 +32,7 @@ const hilmi = new Client('Hilmi','+491725005050','hlmgnc@gmail.com')
 //console.log(cem,hilmi)
 hilmi.createBooking(cem)
 console.log(hilmi.bookings)
-hilmi.removeBooking(cem)
-console.log(hilmi.bookings)
+//hilmi.removeBooking(cem)
+//console.log(hilmi.bookings)
+hilmi.updateBooking(cem)
+
