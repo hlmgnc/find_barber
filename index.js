@@ -23,6 +23,10 @@ class Barber {
         this.address = address,
         this.date = Date(),
         this.experts = ['haircut','manicure']
+        this.bookings = []
+    }
+    createBooking(client,date) {
+        this.bookings.push(client)   
     }
 }
 
@@ -31,8 +35,10 @@ const hilmi = new Client('Hilmi','+491725005050','hlmgnc@gmail.com')
 
 //console.log(cem,hilmi)
 hilmi.createBooking(cem)
-console.log(hilmi.bookings)
+cem.createBooking(hilmi)
+console.log(hilmi.bookings[0].name)
+console.log(cem.bookings[0].name)
 //hilmi.removeBooking(cem)
 //console.log(hilmi.bookings)
-hilmi.updateBooking(cem)
+//hilmi.updateBooking(cem,Date())
 
