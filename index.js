@@ -6,13 +6,15 @@ class Client {
       this.email = email
       this.bookings = [] 
       const clientId = uuidv4();
+      this.clientId = clientId
       console.log(clientId)    
     }
   
-    createBooking(barber, date) {
+    createBooking(barber, date, barberId) {
       this.bookings.push({
         name: barber.name,
         date,
+        id: barber.barberId
       });
   
       barber.createBooking(this, date);
@@ -31,7 +33,7 @@ class Client {
     }
     cancelBooking(barber){
         this.bookings = this.bookings.filter((booking) => {
-            if (booking.name === barber.name) {
+            if (booking.clientId === barber.name) {
               return false;
             }
               return true;
@@ -48,12 +50,14 @@ class Barber {
       this.bookings = []
       const barberId = uuidv4();
       console.log(barberId)  
+      this.barberId = barberId
     }
   
     createBooking(client, date) {
       this.bookings.push({
         name: client.name,
         date,
+        id: client.clientId
       });
     }
   
