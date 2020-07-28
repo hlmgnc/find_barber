@@ -1,9 +1,12 @@
+const { v4: uuidv4 } = require('uuid');
 class Client {
     constructor(name, phone, email) {
       this.name = name
       this.phone = phone
       this.email = email
-      this.bookings = []    
+      this.bookings = [] 
+      const clientId = uuidv4();
+      console.log(clientId)    
     }
   
     createBooking(barber, date) {
@@ -43,6 +46,8 @@ class Barber {
       this.address = address
       this.experts = ["haircut", "manicure"]
       this.bookings = []
+      const barberId = uuidv4();
+      console.log(barberId)  
     }
   
     createBooking(client, date) {
@@ -71,9 +76,9 @@ class Barber {
     }
 }
   
-  const cem = new Barber("Cem", "Wilhelm Str 14 65800 Wiesbaden");
-  const hilmi = new Client("Hilmi", "+491725005050", "hlmgnc@gmail.com");
- 
+  const cem = new Barber("Cem", "Wilhelm Str 14 65800 Wiesbaden")
+  const hilmi = new Client("Hilmi", "+491725005050", "hlmgnc@gmail.com")
+  
   
   console.log("CREATE");
   let apptDate;
@@ -98,3 +103,6 @@ class Barber {
   
   console.log(hilmi.bookings);
   console.log(cem.bookings);
+ 
+
+ 
