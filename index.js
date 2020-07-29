@@ -79,6 +79,12 @@ class Barber {
         })
     }
 }
+class Booking{
+  constructor(){
+    
+  }
+}
+
   
   const cem = new Barber("Cem", "Wilhelm Str 14 65800 Wiesbaden")
   const hilmi = new Client("Hilmi", "+491725005050", "hlmgnc@gmail.com")
