@@ -6,9 +6,13 @@ class Barber {
       this.experts = ["haircut", "manicure"]
       this.bookings = []
       const barberId = uuidv4();
-      console.log(barberId)  
+      //console.log(barberId)  
       this.barberId = barberId
+     
+  
     }
+  
+   
 }
 
 module.exports = Barber

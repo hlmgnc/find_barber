@@ -1,14 +1,17 @@
 const { v4: uuidv4 } = require('uuid');
 class Booking{
         constructor(client, barber, date) {
-            
+        
             this.client = client       
             this.barber = barber        
             this.date = date
             const bookingId = uuidv4();
             this.bookingId = bookingId
-            console.log(bookingId)
+            //console.log(bookingId)
         }
+
+   
+
        /* createBooking(clientId, barberId, date) {
             this.bookings.push({
               name: barber.name,
