@@ -7,14 +7,6 @@ class Client {
       this.bookings = [] 
       const clientId = uuidv4();
       this.clientId = clientId
-      //console.log(clientId) 
-     
-      //console.log(this.bookings)
-    
-    } 
-   
-   
-   
+    }   
 }
-
 module.exports = Client

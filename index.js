@@ -14,38 +14,25 @@
   const jing = new Client("Jing", "+490809696", "jing@jing.com")
   const alina = new Client("Alina", "+4916677443", "alina@alina.com")
   let bookings = []
-  //const bookings = []
   let booking = new Booking(gaby, furkan, apptDate) 
   bookings.push(booking)
-  //gaby.addBooking(furkan)
+  hilmi.book(furkan, apptDate)
   booking = new Booking(hilmi, furkan, apptDate) 
   bookings.push(booking)
-  //hilmi.addBooking(furkan)
+  
   booking = new Booking(paloma, furkan, apptDate) 
   bookings.push(booking)
-  //paloma.addBooking(furkan)
+
   booking = new Booking(gaby, cem, apptDate) 
   bookings.push(booking)
-  //gaby.addBooking(cem)
-   //console.log("CREATE");
-  //hilmi.createBooking(cem, apptDate); 
-  //console.log(hilmi.bookings);
-  //console.log(cem.bookings);
  
-  //console.log(bookings)
-  //console.log("UPDATE"); 
-  //apptDate.setMonth(7); 
-  //hilmi.updateBooking(cem, apptDate); 
+  console.log(bookings)
+ 
   console.log(gaby.bookings); 
-  //console.log(furkan.bookings);
+
 
   
-  //console.log("CANCEL");
   
-  //hilmi.cancelBooking(cem); 
-  
-  //console.log(hilmi.bookings);
-  //console.log(cem.bookings);
  
 
  
