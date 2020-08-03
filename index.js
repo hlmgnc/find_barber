@@ -6,15 +6,15 @@
   const hilmi = new Client("Hilmi", "+491725005050", "hlmgnc@gmail.com")
   
   
-  console.log("CREATE");
+  //console.log("CREATE");
   let apptDate;
   apptDate = new Date(); 
-  hilmi.createBooking(cem, apptDate); 
+  //hilmi.createBooking(cem, apptDate); 
   console.log(hilmi.bookings);
   console.log(cem.bookings);
   
   
-  console.log("UPDATE");
+  //console.log("UPDATE");
   
   apptDate.setMonth(7); 
   //hilmi.updateBooking(cem, apptDate); 
@@ -23,7 +23,7 @@
   console.log(cem.bookings);
 
   
-  console.log("CANCEL");
+  //console.log("CANCEL");
   
   //hilmi.cancelBooking(cem); 
   

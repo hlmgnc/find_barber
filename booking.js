@@ -1,14 +1,15 @@
 const { v4: uuidv4 } = require('uuid');
 class Booking{
-        constructor(clientId, barberId, date) {
+        constructor(client, barber, date) {
             
-            this.clientId = clientId        
-            this.barberId = barberId        
+            this.client = client       
+            this.barber = barber        
             this.date = date
             const bookingId = uuidv4();
             this.bookingId = bookingId
+            console.log(bookingId)
         }
-        createBooking(clientId, barberId, date) {
+       /* createBooking(clientId, barberId, date) {
             this.bookings.push({
               name: barber.name,
               date,
@@ -35,8 +36,8 @@ class Booking{
                     return true
                 })
             barber.cancelBooking(this);
-        }
-    }
+        } */
+}
 
 
 module.exports = Booking 
