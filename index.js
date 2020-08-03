@@ -17,25 +17,27 @@
   //const bookings = []
   let booking = new Booking(gaby, furkan, apptDate) 
   bookings.push(booking)
+  gaby.addBooking(furkan)
   booking = new Booking(hilmi, furkan, apptDate) 
   bookings.push(booking)
+  hilmi.addBooking(furkan)
   booking = new Booking(paloma, furkan, apptDate) 
   bookings.push(booking)
-  booking = new Booking(alina, cem, apptDate) 
- 
+  paloma.addBooking(furkan)
+  booking = new Booking(gaby, cem, apptDate) 
   bookings.push(booking)
-  //console.log("CREATE");
- 
+  gaby.addBooking(cem)
+   //console.log("CREATE");
   //hilmi.createBooking(cem, apptDate); 
   //console.log(hilmi.bookings);
   //console.log(cem.bookings);
  
   console.log(bookings)
   //console.log("UPDATE"); 
-  apptDate.setMonth(7); 
+  //apptDate.setMonth(7); 
   //hilmi.updateBooking(cem, apptDate); 
-  console.log(gaby.bookings);
-  console.log(furkan.bookings);
+  console.log(cem.bookings);
+  //console.log(furkan.bookings);
 
   
   //console.log("CANCEL");

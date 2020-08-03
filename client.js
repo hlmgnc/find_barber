@@ -7,10 +7,14 @@ class Client {
       this.bookings = [] 
       const clientId = uuidv4();
       this.clientId = clientId
-      //console.log(clientId)    
+      //console.log(clientId) 
      
+      console.log(this.bookings)
     
-    }  
+    } 
+    addBooking(booking) {
+        this.bookings.push(booking)
+    } 
    
    
 }
