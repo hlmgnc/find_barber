@@ -10,11 +10,9 @@ class Barber {
       //let booking 
       //this.bookings.push(booking) 
       this.barberId = barberId
-      console.log(this.bookings)
+      //console.log(this.bookings)
     }
-    addBooking(booking) {
-        this.bookings.push(booking)
-    } 
+    
   
    
 }

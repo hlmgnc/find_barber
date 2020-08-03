@@ -9,12 +9,10 @@ class Client {
       this.clientId = clientId
       //console.log(clientId) 
      
-      console.log(this.bookings)
+      //console.log(this.bookings)
     
     } 
-    addBooking(booking) {
-        this.bookings.push(booking)
-    } 
+   
    
    
 }

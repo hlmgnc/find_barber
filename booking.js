@@ -8,6 +8,10 @@ class Booking{
         this.bookingId = bookingId
             //console.log(bookingId)
         }
+
+        addBooking(booking) {
+            this.bookings.push(booking)
+        } 
        /* createBooking(clientId, barberId, date) {
             this.bookings.push({
               name: barber.name,
