@@ -9,9 +9,6 @@ class Booking{
             this.bookingId = bookingId
             //console.log(bookingId)
         }
-
-   
-
        /* createBooking(clientId, barberId, date) {
             this.bookings.push({
               name: barber.name,
@@ -41,6 +38,4 @@ class Booking{
             barber.cancelBooking(this);
         } */
 }
-
-
 module.exports = Booking 
