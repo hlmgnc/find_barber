@@ -1,6 +1,7 @@
   const Barber = require('./barber')
   const Client = require('./client')
   const Booking = require('./booking')
+  
   let apptDate;
   apptDate = new Date();  
 
@@ -13,22 +14,25 @@
   const paloma = new Client("Paloma","+491778880404", "paloma@paloma.com")
   const jing = new Client("Jing", "+490809696", "jing@jing.com")
   const alina = new Client("Alina", "+4916677443", "alina@alina.com")
+  
   let bookings = []
   let booking = new Booking(gaby, furkan, apptDate) 
   bookings.push(booking)
-  hilmi.book(furkan, apptDate)
-  booking = new Booking(hilmi, furkan, apptDate) 
-  bookings.push(booking)
   
-  booking = new Booking(paloma, furkan, apptDate) 
-  bookings.push(booking)
+  hilmi.book(furkan, apptDate)
+  
+  //booking = new Booking(hilmi, furkan, apptDate) 
+  //bookings.push(booking)
+  
+  //booking = new Booking(paloma, furkan, apptDate) 
+  //bookings.push(booking)
 
-  booking = new Booking(gaby, cem, apptDate) 
-  bookings.push(booking)
+  //booking = new Booking(gaby, cem, apptDate) 
+  //bookings.push(booking)
  
-  console.log(bookings)
+  //console.log(bookings)
  
-  console.log(gaby.bookings); 
+  console.log(hilmi.bookings); 
 
 
   
