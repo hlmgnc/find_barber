@@ -1,5 +1,7 @@
 const { v4: uuidv4 } = require('uuid');
 const Booking = require('./booking')
+//const colors = require('colors')
+
 class Client {
     constructor(name, phone, email) {
       this.name = name
@@ -14,5 +16,6 @@ class Client {
         this.bookings.push(booking)
         return booking
     }
+    
 }
 module.exports = Client
