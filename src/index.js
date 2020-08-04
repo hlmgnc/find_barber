@@ -1,6 +1,6 @@
 const Barber = require("./barber");
 const Client = require("./client");
-const { Booking ,findBookingsByClient } = require("./booking");
+const { Booking, findBookingsByClient, findBookingsByBarber } = require("./booking");
 
 
 let apptDate;
@@ -20,28 +20,16 @@ let bookings = [];
 let booking = new Booking(gaby, furkan, apptDate);
 bookings.push(booking);
 
-let clientId 
+let clientId ,barberId
 
-//clientId = hilmi.clientId
-// const hilmisBookings = bookings.filter((booking ) => {
-//   console.log(booking)
-
-//   return booking.client.clientId === clientId
-// });
 const hilmisBookings = findBookingsByClient(hilmi,bookings)
+console.log(hilmisBookings)  
 
-console.log(hilmisBookings)   
-
-clientId = gaby.clientId
-const gabysBookings = bookings.filter((booking ) => {
-  console.log(booking)
-
-  return booking.client.clientId === clientId
-});
+const gabysBookings = findBookingsByClient(gaby, bookings)
 console.log(gabysBookings)  
 
-
-
+const furkansBookings = findBookingsByBarber(furkan,bookings)
+console.log(furkansBookings)
   
 
  

@@ -16,4 +16,11 @@ function findBookingsByClient(client, bookings) {
     return booking.client.clientId === client.clientId
   })
 } 
-module.exports = { Booking , findBookingsByClient } 
+
+function findBookingsByBarber(barber, bookings) {
+    return bookings.filter(booking => {
+    return booking.barber.barberId === barber.barberId
+  })
+}
+
+module.exports = { Booking, findBookingsByClient, findBookingsByBarber } 
