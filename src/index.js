@@ -22,7 +22,7 @@ bookings.push(booking);
 
 let clientId 
 
-// clientId = hilmi.clientId
+//clientId = hilmi.clientId
 // const hilmisBookings = bookings.filter((booking ) => {
 //   console.log(booking)
 
