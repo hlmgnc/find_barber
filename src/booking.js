@@ -9,10 +9,10 @@ class Booking{
         const bookingId = uuidv4();
         this.bookingId = bookingId
     } 
-    findBookingsByClient(client) {
-        bookings.filter((booking ) => {
-        return booking.client.clientId === clientId
-        });
-  }  
+    function findBookingsByClient(client, bookings) {
+          return bookings.filter(booking => {
+          return booking.client.clientId === client.clientId
+        })
+    } 
 }
-module.exports = Booking 
+module.exports = { Booking , findBookingsByClient } 

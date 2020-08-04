@@ -1,6 +1,7 @@
 const Barber = require("./barber");
 const Client = require("./client");
-const Booking = require("./booking");
+const { Booking ,findBookingsByClient } = require("./booking");
+
 
 let apptDate;
 apptDate = new Date();
@@ -27,7 +28,7 @@ let clientId
 
 //   return booking.client.clientId === clientId
 // });
-const hilmisBookings = findBookingsByClient(hilmi)
+const hilmisBookings = findBookingsByClient(hilmi,bookings)
 
 console.log(hilmisBookings)   
 
