@@ -1,9 +1,8 @@
 const Barber = require("./barber");
 const Client = require("./client");
-const { Booking, findBookingsByClient, findBookingsByBarber } = require("./booking");
+const { Booking, findBookingsByClient, findBookingsByBarber, cancelBooking } = require("./booking");
 
-
-let apptDate;
+var apptDate;
 apptDate = new Date();
 
 const cem = new Barber("Cem", "Wilhelm Str 14 65800 Wiesbaden");
@@ -20,16 +19,41 @@ let bookings = [];
 let booking = new Booking(gaby, furkan, apptDate);
 bookings.push(booking);
 
-let clientId ,barberId
+let booking2 = new Booking(hilmi, cem, apptDate);
+bookings.push(booking2);
 
-const hilmisBookings = findBookingsByClient(hilmi,bookings)
-console.log(hilmisBookings)  
+let booking3 = new Booking(paloma, mihri, apptDate);
+bookings.push(booking3);
+
+let booking4 = new Booking(alina, furkan, apptDate);
+bookings.push(booking4);
+
+let booking5 = new Booking(jing, furkan, apptDate);
+bookings.push(booking5);
+
+let booking6 = new Booking(gaby, cem, apptDate);
+bookings.push(booking6);
+
+let booking7 = new Booking(gaby, mihri, apptDate);
+bookings.push(booking7);
+
+
+// let bookingId = '66767003-a2a1-491b-ba51-8d4d95e531ef'
+// return bookings.filter( booking => booking.bookingId !== bookingId )
+
+
+// let bookingId = booking.bookingId
+// bookings = cancelBooking(bookings, bookingId)
+// console.log(bookings)
+
+//const hilmisBookings = findBookingsByClient(hilmi,bookings) 
+//console.log(hilmisBookings)  
 
 const gabysBookings = findBookingsByClient(gaby, bookings)
 console.log(gabysBookings)  
 
-const furkansBookings = findBookingsByBarber(furkan,bookings)
-console.log(furkansBookings)
+//const furkansBookings = findBookingsByBarber(furkan,bookings)
+//console.log(furkansBookings)
   
 
  

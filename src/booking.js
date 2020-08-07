@@ -1,5 +1,4 @@
 const { v4: uuidv4 } = require('uuid');
-const Client = require('./client')
 
 class Booking{
     constructor(client, barber, date) { 
@@ -11,16 +10,10 @@ class Booking{
     } 
     
 }
-function findBookingsByClient(client, bookings) {
-    return bookings.filter(booking => {
-    return booking.client.clientId === client.clientId
-  })
-} 
+const findBookingsByClient = (client, bookings) => bookings.filter(booking => booking.client.clientId === client.clientId)
 
-function findBookingsByBarber(barber, bookings) {
-    return bookings.filter(booking => {
-    return booking.barber.barberId === barber.barberId
-  })
-}
+const findBookingsByBarber = (barber, bookings) => bookings.filter(booking => booking.barber.id === barber.id)
 
-module.exports = { Booking, findBookingsByClient, findBookingsByBarber } 
+const cancelBooking = (bookings, bookingId) => bookings.filter(booking => booking.bookingId !== bookingId)
+
+module.exports = { Booking, findBookingsByClient, findBookingsByBarber, cancelBooking }

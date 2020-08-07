@@ -4,7 +4,6 @@ class Barber {
       this.name = name
       this.address = address
       this.experts = ["haircut", "manicure"]
-      this.bookings = []
       const barberId = uuidv4();
       this.barberId =barberId
     }   
