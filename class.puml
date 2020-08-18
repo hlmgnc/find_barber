@@ -31,10 +31,4 @@ Booking o--> Client
 Booking o--> Barber
 Barber <--> Client
 
-
-
-
-
-
-
 @enduml
