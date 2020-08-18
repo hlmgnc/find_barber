@@ -1,11 +1,14 @@
 const { v4: uuidv4 } = require('uuid');
-class Barber {
-    constructor(name, address) {
-      this.name = name
-      this.address = address
-      this.experts = ["haircut", "manicure"]
-      const barberId = uuidv4();
-      this.barberId =barberId
-    }   
-}
-module.exports = Barber
+const mongoose = require('mongoose')
+
+
+const barberSchema = new mongoose.Schema({
+    name: String,
+    address: String,
+    experts: [],
+    barberId : Number,
+
+})
+module.exports = mongoose.model('Barber', barberSchema)
+
+
