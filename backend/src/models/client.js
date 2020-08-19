@@ -1,14 +1,51 @@
-const { v4: uuidv4 } = require('uuid');
-const Booking = require('./booking')
+//const autopopulate = require('mongoose-autopopulate')
 const mongoose = require('mongoose')
 
 const clientSchema = new mongoose.Schema ({
+    name: {
+      type: String,
+      unique: true,
+      required: true,
+    },
 
-  name : String,
-  phone : String,
-  email : String,
-  clientId : Number,
+    phone: {
+      type: String,
+      unique: true,
+      required: true,
+    },
+
+    email :{
+      type : String,
+      unique: true,
+      required: true,
+    }, 
+    bookings: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Barber',
+      },
+    ],
+    // updates: [
+    //   {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Barber',
+    //   },
+    // ], 
+    // cancellations: [
+    //   {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'Barber',
+    //   },
+    // ],
 })
+class Client {
+  async book(booking) {
+    this.bookings.push(booking)
+    await this.save()
+  }
+}
 
+clientSchema.loadClass(Client)
+//clientSchema.plugin(autopopulate)
 
 module.exports = mongoose.model('Client' , clientSchema)
