@@ -8,7 +8,7 @@ const logger = require('morgan')
 require('./database-connection')
 
 const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/users')
+const usersRouter = require('./routes/client')
 
 const app = express()
 
