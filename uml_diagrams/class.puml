@@ -1,0 +1,22 @@
+@startuml " Find_Barber uml "
+    
+class Client {
+    name
+    phone
+    email
+    bookings = Array
+    book()
+    cancel()
+    update()
+}
+
+class Barber {
+    name
+    address
+    experts = Array
+}
+
+Client o--> Barber
+Barber --> Client
+
+@enduml
