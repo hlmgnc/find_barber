@@ -1,0 +1,17 @@
+@startuml
+
+
+actor Client
+participant "cancel" as p1
+participant "calendar" as p2
+
+Client -> p1: cancel 
+activate p1
+p1->p2: request cancel
+activate p2
+deactivate p2
+p2->p1: cancel the booking
+p1-> Client : Done!
+deactivate p1
+
+@enduml
