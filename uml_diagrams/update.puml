@@ -1,0 +1,17 @@
+@startuml
+
+start 
+
+if (booking is same and calendar is available) then (yes)
+:update the booking;
+
+else (no) 
+:do not update booking;
+repeat
+
+repeat while()
+
+endif
+stop
+
+@enduml

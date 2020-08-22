@@ -1,0 +1,17 @@
+@startuml
+
+start 
+
+:take calendar;
+
+if (calender is free) then (yes)
+    :book; 
+else (no)
+:check the calendar;
+repeat
+
+repeat while( calender is free?) 
+endif
+stop
+
+@enduml

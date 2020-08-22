@@ -1,0 +1,17 @@
+@startuml
+
+start 
+
+if (booking is same and time is not late) then (yes)
+:cancel the booking;
+
+else (no) 
+:do not cancel booking;
+repeat
+
+repeat while()
+
+endif
+stop
+
+@enduml
