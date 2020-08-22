@@ -1,0 +1,22 @@
+@startuml
+
+left to right direction 
+actor "client" as client
+actor "barber" as barber
+
+package "find_barber app" {
+    usecase "book" as uc1
+
+
+package "modify"{  
+    usecase "cancel" as uc2 
+    usecase "update" as uc3
+    usecase "cancel" as uc4
+}
+}
+
+client --> uc1
+client --> uc2
+client --> uc3
+barber --> uc4
+@enduml
