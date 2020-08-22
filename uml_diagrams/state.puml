@@ -1,0 +1,14 @@
+@startuml
+
+[*] -> BookingState: create a booking
+
+BookingState--> CancellationState :Succeeded
+BookingState--> UpdateState :Succeeded
+BookingState--> [*]:Aborted
+UpdateState--> BookingState :Succeeded
+UpdateState--> [*]:Aborted
+
+CancellationState-->CancellationState
+
+
+@enduml
