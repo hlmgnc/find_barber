@@ -3,18 +3,15 @@ services:
   backend:
     image: backend
     build:
-      context: .
+      context: backend
       dockerfile: Dockerfile
     environment:
-      # - MONGODB_USERNAME
-      # - MONGODB_PASSWORD
-      # - MONGODB_DATABASE
-      - MONGODB_CONNECTION_STRING=mongodb://mongo/backend
+      - MONGODB_CONNECTION_STRING=mongodb://mongo/hilmi_database
     ports:
       - 3000:3000
       - 35729:35729
     volumes:
-      - ./src:/app/src
+      - ./backend/src:/app/src
   mongo:
     image: mongo
     ports:
