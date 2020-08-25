@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const barberSchema = new mongoose.Schema({
-    
+    filename: String,
     name: {
         type: String,
         unique: true,

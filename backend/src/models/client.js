@@ -39,8 +39,8 @@ const clientSchema = new mongoose.Schema ({
     // ],
 })
 class Client {
-  async book(booking) {
-    this.bookings.push(booking)
+  async book(barber) {
+    this.bookings.push(barber)
     await this.save()
   }
 }
