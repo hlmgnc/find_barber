@@ -29,7 +29,7 @@ router.post('/', async (req, res ) => {
     res.send(createdClient)
 })
 
-router.get('initialize', async (req, res) => {
+router.get('/initialize', async (req, res) => {
 
     const hilmi = await Client.create({ name:'Hilmi', phone:'+491725005050', email:'hlmgnc@gmail.com' })
     const gaby = await Client.create({ name: 'Gaby', phone:'+491772333', email:'gaby@gaby.com' })
