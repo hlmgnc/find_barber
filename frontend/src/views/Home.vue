@@ -1,18 +1,18 @@
 <template lang="pug">
   .home
-    HelloWorld(msg="Welcome to Find Barber App")
-    div(v-for="client in clients") {{ client.name }}
+    h1 CLIENTS
+    client-card(v-for="client in clients" :client="client")
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 import axios from 'axios'
+import ClientCard from '@/components/client-card.vue'
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    ClientCard
   },
   data() {
     return {
@@ -22,6 +22,7 @@ export default {
   async created() {
       const clientsRequest = await axios.get('/api/clients')
       this.clients = clientsRequest.data 
-  }
+  },
+
 };
 </script>
