@@ -1,8 +1,7 @@
 <template lang="pug">
   #app
     <div id="nav">
-      <router-link to="/">Clients</router-link> |
-      <router-link to="/about">Barbers</router-link>
+      <router-link to="/">Clients</router-link>
     </div>
     <router-view />
 </template>
