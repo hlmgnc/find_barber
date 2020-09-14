@@ -60,7 +60,7 @@ router.post('/:clientId/books' ,async (req, res) =>{
 router.get('/:clientId', async (req, res) => {
   const client = await Client.findById(req.params.clientId)
 
-  if (client) res.render('client', { client })
+  if (client) res.send(client)
   else res.sendStatus(404)
 })
 
