@@ -1,6 +1,6 @@
 //const autopopulate = require('mongoose-autopopulate')
 const mongoose = require('mongoose')
-
+const passportLocalMongoose = require('passport-local-mongoose')
 const clientSchema = new mongoose.Schema ({
     name: {
       type: String,
@@ -46,6 +46,9 @@ class Client {
 }
 
 clientSchema.loadClass(Client)
+clientSchema.plugin(passportLocalMongoose, {
+  usernameField: 'email',
+})
 //clientSchema.plugin(autopopulate)
 
 module.exports = mongoose.model('Client' , clientSchema)
