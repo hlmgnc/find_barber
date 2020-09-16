@@ -18,8 +18,7 @@ router.post('/', async (req,res) => {
 
     return user
 })
-router.post('/session',
-    passport.authenticate('local', { failWithError: true }), async (req,res) => {
+router.post('/session',passport.authenticate('local', { failWithError: true }), async (req,res) => {
     res.send(req.user)
 })
 router.delete('/session', (req,res) => {
