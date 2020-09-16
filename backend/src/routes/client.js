@@ -31,11 +31,21 @@ router.post('/', async (req, res ) => {
 
 router.get('/initialize', async (req, res) => {
 
-    const hilmi = await Client.create({ name:'Hilmi', phone:'+491725005050', email:'hlmgnc@gmail.com' })
-    const gaby = await Client.create({ name: 'Gaby', phone:'+491772333', email:'gaby@gaby.com' })
-    const paloma = await Client.create({ name: 'Paloma', phone: '+491778880404', email: 'paloma@paloma.com' })
-    const jing = await Client.create({ name: 'Jing', phone :'+490809696', email: 'jing@jing.com' })
-    const alina = await Client.create({ name: 'Alina', phone: '+4916677443', email: 'alina@alina.com' })
+    const hilmi = new Client.create({ name:'Hilmi', phone:'+491725005050', email:'hlmgnc@gmail.com' })
+    await hilmi.setPassword('test')
+    await hilmi.save()
+    const gaby = new Client.create({ name: 'Gaby', phone:'+491772333', email:'gaby@gaby.com' })
+    await gaby.setPassword('test')
+    await gaby.save()
+    const paloma = new Client.create({ name: 'Paloma', phone: '+491778880404', email: 'paloma@paloma.com' })
+    await paloma.setPassword('test')
+    await paloma.save()
+    const jing = new Client.create({ name: 'Jing', phone :'+490809696', email: 'jing@jing.com' })
+    await jing.setPassword('test')
+    await jing.save()
+    const alina = new Client.create({ name: 'Alina', phone: '+4916677443', email: 'alina@alina.com' })
+    await alina.setPassword('test')
+    await alina.save()
 
     const cem = await Barber.create({ name :'Cem', address: 'Wilhelm Str 14 65800 Wiesbaden' })
     const furkan = await Barber.create({ name :'Furkan', address: 'Mainzerland str 25 67300 Frankfurt am Main' })
